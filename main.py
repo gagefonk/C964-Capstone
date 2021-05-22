@@ -221,4 +221,4 @@ def make_prediction(ans):
     return predAns, accAns
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
