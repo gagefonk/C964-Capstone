@@ -6,8 +6,6 @@ from markupsafe import Markup
 from plotly.subplots import make_subplots
 import pandas as pd
 from sklearn.metrics import *
-import qgrid
-
 app = Flask(__name__)
 # IMPORT CSV DATA
 cvd = pd.read_csv('cv_disease.csv')
@@ -118,23 +116,6 @@ def checkAuth():
         return redirect(url_for('login'))
 
 #####FUNCTIONS######
-# EVAL TEST DATA
-def evaluate_preds(y_t, y_p):
-    accuracy = accuracy_score(y_t, y_p)
-    precision = precision_score(y_t, y_p)
-    recall = recall_score(y_t, y_p)
-    f1 = f1_score(y_t, y_p)
-    metrics = {'accuracy': round(accuracy, 2),
-               'precision': round(precision, 2),
-               'recall': round(recall, 2),
-               'f1': round(f1, 2)}
-    print('Accuracy: {:.2f}%'.format(accuracy * 100))
-    print('Precision: {:.2f}'.format(precision))
-    print('Recall: {:.2f}'.format(recall))
-    print('F1: {:.2f}'.format(f1))
-    return metrics
-
-
 # FIG 1
 def draw_fig_1():
     age_male = cvd.loc[(cvd.GENDER == 2) & (cvd['CARDIO_DISEASE'] == 1)]
@@ -223,15 +204,6 @@ def draw_fig_3():
     heatmap_fig.update_layout(title='Correlation')
     graph = plotly.offline.plot(heatmap_fig, output_type='div')
     return graph
-
-
-# INTERACTIVE DATA
-def interactive_data():
-    df_interactive = qgrid.show_grid(cvd, grid_options={
-        'editable': False})
-    df_interactive.layout.width = "755px"
-    df_interactive.layout.height = "185px"
-    return df_interactive
 
 # MAKE PREDICTION
 def make_prediction(ans):
