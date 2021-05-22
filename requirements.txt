@@ -1,11 +1,10 @@
-
 Flask==1.1.2
 Flask-Compress==1.4.0
-gunicorn @ file:///Users/runner/miniforge3/conda-bld/gunicorn_1617043092864/work
-MarkupSafe @ file:///opt/concourse/worker/volumes/live/c20ad064-4f90-4ff5-7450-8b6ffac9ebe8/volume/markupsafe_1620985072280/work
-matplotlib @ file:///opt/concourse/worker/volumes/live/41e8cd50-031f-4dda-5787-dd3c4f4e0f08/volume/matplotlib-suite_1613407855571/work
-numpy @ file:///opt/concourse/worker/volumes/live/43c6229c-0418-40f9-7644-06e35c2c24e6/volume/numpy_and_numpy_base_1620831187393/work
+gunicorn
+MarkupSafe
+matplotlib
+numpy
 pandas==1.2.4
-plotly @ file:///tmp/build/80754af9/plotly_1610565580232/work
-scikit-learn @ file:///opt/concourse/worker/volumes/live/83f46a43-da2a-467b-5581-ed2cbd128684/volume/scikit-learn_1621370403088/work
+plotly
+scikit-learn
 
