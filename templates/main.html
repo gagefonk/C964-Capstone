@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cardiovascular Disease Detection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <style>
+        html {
+            background-color: #56baed;
+        }
+
+        body {
+            background-color: #56baed;
+            text-align: center;
+            width: 40%;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+
+        div {
+            text-align: center;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Make A Prediction</h1>
+    <p><a href="/data">Data Visualization</a></p>
+
+
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="ageInput">Age</label>
+            <input type="number" class="form-control" name="ageInput" placeholder="Please Enter Age" value="30" required="required">
+        </div>
+        <div class="form-group">
+            <label for="weightInput">Weight</label>
+            <input type="number" class="form-control" name="weightInput" placeholder="Please Enter weight(kg)" value="90" required="required">
+        </div>
+        <div class="form-group">
+            <label for="heighInput">Height</label>
+            <input type="number" class="form-control" name="heighInput" placeholder="Please Enter Height(cm)" value="160" required="required">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender">
+                <option>Female</option>
+                <option>Male</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="apHigh">Systolic Blood Pressure</label>
+            <input type="number" class="form-control" name="apHigh" placeholder="Please Enter a Number" value="110" required="required">
+        </div>
+        <div class="form-group">
+            <label for="apLow">Diastolic Blood PRessure</label>
+            <input type="number" class="form-control" name="apLow" placeholder="Please Enter a Number" value="70" required="required">
+        </div>
+        <div class="form-group">
+            <label for="cholesterol">Cholesterol</label>
+            <select class="form-control" name="cholesterol" required="required">
+                <option>Normal</option>
+                <option>Above Average</option>
+                <option>Very High</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="glucose">Glucose</label>
+            <select class="form-control" name="glucose">
+                <option>Normal</option>
+                <option>Above Average</option>
+                <option>Very High</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="smoke">Do you smoke?</label>
+            <select class="form-control" name="smoke">
+                <option>No</option>
+                <option>Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="alcohol">Do you drink?</label>
+            <select class="form-control" name="alcohol">
+                <option>No</option>
+                <option>Yes</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="active">Are you physically active?</label>
+            <select class="form-control" name="active">
+                <option>No</option>
+                <option>Yes</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Predict</button>
+    </form>
+</body>
+
+
+</html>
