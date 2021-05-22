@@ -1,4 +1,3 @@
-import urllib
 from flask import Flask, render_template, redirect, url_for, request
 import pickle
 import plotly
@@ -11,7 +10,7 @@ app = Flask(__name__)
 # IMPORT CSV DATA
 cvd = pd.read_csv('https://raw.githubusercontent.com/gagefonk/C964-Capstone/main/cv_disease.csv')
 # IMPORT MACHINE LEARNING DATA
-gs_classifier = pickle.load(urllib.request.urlopen("https://github.com/gagefonk/C964-Capstone/blob/68b1a65f6b108283dd441bb6c96c140c42118ae6/gs_classifier.pkl"))
+gs_classifier = pickle.load(open('gs_classifier.pkl', 'rb'))
 pd.options.plotting.backend = 'plotly'
 authenticated = False
 pred_answers = []
